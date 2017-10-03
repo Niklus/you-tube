@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/youtube.js"></script>
+  <style>body{background: #eee; text-align:center;}</style>
+</head>
+<body>
+  
+  <h2>Component Demo</h2>
+
+  <!-- YouTube Component -->
+  <you-tube  
+    height='390' 
+    width='640'
+    video_id='sZQ1DESaDfg'
+    controls="0"
+    autoplay="1"></you-tube>
+  
+  <!--Demo Control Operations-->
+  <button onclick="play()">Play</button>
+  <button onclick="pause()">Pause</button>
+  <button onclick="stop()">Stop</button><br/>
+  <input class="input" placeholder="Youtube Video ID" type="text" id="myId"/>
+  <button onclick="load(document.getElementById('myId').value)">Load</button>
+  
+  <script>
+  	   
+    let player; 
+    let yt = document.querySelector('you-tube');  
+    yt.onPlayerReady = evt => player = evt.target; // access player object on evt.target
+    
+    // Some simple operations
+    function play(){player.playVideo()}
+    function pause(){player.pauseVideo()}
+    function stop(){player.stopVideo()}
+    function load(id){id? player.loadVideoById(id) : null}
+    //list  of operations on the player object : https://developers.google.com/youtube/iframe_api_reference#Operations"*/
+  </script>
+</body>
+</html>

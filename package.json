@@ -1,6 +1,6 @@
 {
   "name": "you-tube",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "YouTube Web Component built with Stencil",
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",

@@ -44,6 +44,9 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
     onPlayerReady={evt => evt.target.playVideo()}></you-tube>
 ```
 
+### The player
+- The player object can be accessed through evt.target on the event handlers 
+- [A List  of operations avilable on the player object found here](https://developers.google.com/youtube/iframe_api_reference#Operations)
 
 ### Script tag
 - Put a script tag similar to this `<script src='https://unpkg.com/you-tube@0.0.1/dist/youtube.js'></script>` in the head of your index.html

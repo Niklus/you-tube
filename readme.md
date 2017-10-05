@@ -49,7 +49,7 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
 - [A List  of operations avilable on the player object can be found here](https://developers.google.com/youtube/iframe_api_reference#Operations)
 
 ### Script tag
-- Put a script tag similar to this `<script src='https://unpkg.com/you-tube@0.0.3/dist/youtube.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/you-tube@0.0.4/dist/youtube.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules

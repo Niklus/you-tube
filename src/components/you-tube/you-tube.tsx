@@ -23,8 +23,12 @@ export class YouTube {
   @Prop() onError: Function;
  
   componentDidLoad(){
-    // load API then construct player
-    this.loadApi().then( YT => this.constructPlayer(YT));
+    if('YT' in window){
+      this.constructPlayer(window['YT']);
+    }else{
+      // load API then construct player
+      this.loadApi().then( YT => this.constructPlayer(YT)); 
+    }
   }
   
   // Player Constructor
@@ -72,22 +76,17 @@ export class YouTube {
  
   // Load the API
   loadApi(){
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    if(!window['YT']){ // For SPA's avoid creating multiple script tags
-      var tag = document.createElement('script');
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // return a promise that resolves to YT when the iframe is ready
-      return new Promise( resolve => {
-        window['onYouTubeIframeAPIReady'] = () => {
-          resolve(window['YT']);
-        }  
-      });
-    }else{
-      return new Promise(resolve => resolve(window['YT']));
-    }   
+    // return a promise that resolves to YT when the iframe is ready
+    return new Promise( resolve => {
+      window['onYouTubeIframeAPIReady'] = () => {
+        resolve(window['YT']);
+      }  
+    });
   }
   
   render() {

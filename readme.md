@@ -14,12 +14,12 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
  - controls (string) : "1" to show & "0" to hide
 
 ### Event handler Properties
- - onPlayerReady (Function) 
- - onPlayerStateChange (Function) 
- - onPlaybackQualityChange (Function)
- - onPlaybackRateChange: (Function) 
- - onApiChange (Function)
- - onError: (Function)
+ - playerReady (Function) 
+ - playerStateChange (Function) 
+ - playbackQualityChange (Function)
+ - playbackRateChange: (Function) 
+ - playerApiChange (Function)
+ - playerError: (Function)
  
 ## Using this component
 
@@ -49,10 +49,14 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
 - [A List  of operations avilable on the player object can be found here](https://developers.google.com/youtube/iframe_api_reference#Operations)
 
 ### Script tag
-- Put a script tag similar to this `<script src='https://unpkg.com/you-tube@0.0.4/dist/youtube.js'></script>` in the head of your index.html
+
+- Put a script tag similar to this `<script type="module" src="https://unpkg.com/you-tube@0.0.8/dist/you-tube/you-tube.esm.js"></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
+- Remember to add type="module" on your script tag as shown above
 
 ### Node Modules
+
 - Run `npm install you-tube --save`
-- Put a script tag similar to this `<script src='node_modules/you-tube/dist/youtube.js></script>` in the head of your index.html
+- Put a script tag similar to this `<script type="module" src="node_modules/you-tube/dist/you-tube/you-tube.esm.js"></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
+- Remember to add type="module" on your script tag as shown above

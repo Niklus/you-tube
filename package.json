@@ -1,26 +1,28 @@
 {
   "name": "you-tube",
-  "version": "0.0.4",
-  "description": "YouTube Web Component built with Stencil",
-  "main": "dist/collection/index.js",
-  "types": "dist/collection/index.d.ts",
+  "version": "0.0.8",
+  "description": "YouTube Web Component",
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/you-tube/you-tube.esm.js",
   "files": [
-    "dist/"
+    "dist/",
+    "loader/"
   ],
-  "browser": "dist/youtube.js",
   "scripts": {
-    "build": "stencil build",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "serve": "stencil-dev-server",
-    "start": "npm run dev"
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "0.0.6-0"
-  },
-  "devDependencies": {
-    "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest"
+    "@stencil/core": "2.5.2"
   },
   "repository": {
     "type": "git",

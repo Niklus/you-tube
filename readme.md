@@ -30,7 +30,7 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
  <you-tube  
     height='390' 
     width='640'
-    video_id='sZQ1DESaDfg'
+    video_id='YBwgkr_Sbx0'
     controls="0"
     autoplay="1"></you-tube>
 ```
@@ -40,8 +40,8 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
  <you-tube  
     height='390' 
     width='640'
-    video_id='sZQ1DESaDfg'
-    onPlayerReady={evt => evt.target.playVideo()}></you-tube>
+    video_id='YBwgkr_Sbx0'
+    playerReady={evt => evt.target.playVideo()}></you-tube>
 ```
 
 ### The player
@@ -50,7 +50,7 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
 
 ### Script tag
 
-- Put a script tag similar to this `<script type="module" src="https://unpkg.com/you-tube@0.0.8/dist/you-tube/you-tube.esm.js"></script>` in the head of your index.html
+- Put a script tag similar to this `<script type="module" src="https://unpkg.com/you-tube@0.0.9/dist/you-tube/you-tube.esm.js"></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 - Remember to add type="module" on your script tag as shown above
 

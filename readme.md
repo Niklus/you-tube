@@ -44,7 +44,7 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
     playerReady={evt => evt.target.playVideo()}></you-tube>
 ```
 
-### Add the following script tag in the head of your index.html
+#### Add the following script tag in the head of your index.html
 ```html
   <script 
     type="module" 

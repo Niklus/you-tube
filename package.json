@@ -1,6 +1,6 @@
 {
   "name": "you-tube",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "YouTube Web Component",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
@@ -29,5 +29,13 @@
     "url": "git+https://github.com/Niklus/you-tube.git"
   },
   "author": "Nicholas Otieno",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "YouTube",
+    "Web Component",
+    "YouTube Web Component",
+    "Custom Element",
+    "YouTube Custom Element",
+    "YouTube Iframe API"
+  ]
 }

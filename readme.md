@@ -60,3 +60,6 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
 - Put a script tag similar to this `<script type="module" src="node_modules/you-tube/dist/you-tube/you-tube.esm.js"></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 - Remember to add type="module" on your script tag as shown above
+
+### Demo
+- Look at the [DEMO](https://github.com/Niklus/you-tube-demo) and learn more on how to use the component

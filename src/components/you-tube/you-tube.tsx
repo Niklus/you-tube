@@ -38,7 +38,10 @@ export class YouTube {
       height: this.height,
       width: this.width,
       videoId: this.video_id,
-      playerVars: { 'autoplay': this.autoplay, 'controls': this.controls },
+      playerVars: {
+        'autoplay': parseInt(this.autoplay),
+        'controls': parseInt(this.controls)
+      },
       events: {
         'onReady': event => this.onReady(event),
         'onStateChange': event => this.onStateChange(event),

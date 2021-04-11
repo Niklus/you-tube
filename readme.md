@@ -25,7 +25,7 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
 
 ### Usage example
 
-#### html
+#### In your html or jsx
 ```html
   <you-tube  
     height='390' 
@@ -35,20 +35,11 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
     autoplay="1"></you-tube>
 ```
 
-#### jsx
-```jsx
-  <you-tube  
-    height='390' 
-    width='640'
-    video_id='YBwgkr_Sbx0'
-    playerReady={evt => evt.target.playVideo()}></you-tube>
-```
-
 #### Add the following script tag in the head of your .html page
 ```html
   <script 
     type="module" 
-    src="https://unpkg.com/you-tube@0.1.5/dist/you-tube/you-tube.esm.js">
+    src="https://unpkg.com/you-tube@0.1.6/dist/you-tube/you-tube.esm.js">
   </script>
 ```
 
@@ -57,7 +48,7 @@ you-tube is a web component built on top of the [YouTube Iframe API](https://dev
 - [A List  of operations avilable on the player object can be found here](https://developers.google.com/youtube/iframe_api_reference#Operations)
 
 ### Script tag
-- Put a script tag similar to this `<script type="module" src="https://unpkg.com/you-tube@0.1.5/dist/you-tube/you-tube.esm.js"></script>` in the head of your .html page as shown above
+- Put a script tag similar to this `<script type="module" src="https://unpkg.com/you-tube@0.1.6/dist/you-tube/you-tube.esm.js"></script>` in the head of your .html page as shown above
 - Then you can use the element anywhere in your template, JSX, html etc
 - Remember to add type="module" on your script tag as shown above
 
